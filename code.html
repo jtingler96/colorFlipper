@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>Reverse Text</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/prism.css">
+   
+</head>
+
+<body class="d-flex flex-column h-100">
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Reverse Text</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto pe-5 mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Demo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="code.html">Code</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main class="flex-shrink-0">
+        <div class="container d-flex justify-content-center ">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12">
+                    <h1 class="mt-5 mb-1 text-dark">Javascript</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center pt-1 pb-5 ms-md-3 me-md-5 me-xl-auto ms-xl-auto">
+            <div class="col-11">
+    <pre class="language-js line-numbers">
+    <code class="language-js">//Hex color generator
+      const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+      const btn = document.getElementById("btn");
+      const color = document.querySelector(".color");
+      
+      btn.addEventListener("click", function () {
+          let hexColor = "#";
+          for(let i = 0; i<6; i++){
+              hexColor += hex[getRandomNumber()];
+          }
+      
+      color.textContent = hexColor;
+      document.body.style.backgroundColor = hexColor;
+      });
+      
+      function getRandomNumber (){
+          return Math.floor(Math.random()* hex.length)
+      }
+    
+    </code>
+    </pre>
+            </div>
+           
+        </div>
+    </main>
+    <footer class="footer mt-auto mb-0 py-3 bg-dark sticky-footer">
+        <div class="container-fluid text-center">
+            <span class="text-muted"><p>Created by <strong>Joshua Tingler</strong> <span class="copyright">| &copy; All Rights Reserved 2021</span></p></span>
+        </div>
+    </footer>
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
